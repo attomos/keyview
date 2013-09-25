@@ -40,9 +40,11 @@ function handleKey(name, ctrl, shift) {
   stack.push(name)
   var color = 81
   if (ctrl) color = 210
-  if (shift) color = 227
+  //if (shift) color = 227
+  if (shift) color = 234
   if (name.length == 1) {
-    if (!shift) color = 255
+    //if (!shift) color = 255
+    if (!shift) color = 209
     process.stdout.write('\x1B[1;38;5;' + color + 'm' + name + '')
   } else {
     process.stdout.write('\x1B[1;38;5;' + color + 'm<' + name + '>')
